@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>제주 반딧불이 밤길 축제</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Montserrat:wght@300;600&display=swap');
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, #0b1e2d 0%, #1b394f 70%, #000000 100%);
+      color: #f3f3f3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      padding: 3rem 2rem 5rem;
+      text-align: center;
+      background: radial-gradient(circle at center, #1f3040 0%, transparent 70%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 반딧불이 빛나는 점들 */
+    header::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffff8d 0%, transparent 80%);
+      top: 30%;
+      left: 10%;
+      opacity: 0.3;
+      filter: blur(25px);
+      animation: flicker 3s infinite alternate;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #a7ffeb 0%, transparent 80%);
+      top: 50%;
+      right: 15%;
+      opacity: 0.25;
+      filter: blur(20px);
+      animation: flicker 4s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% {opacity: 0.25;}
+      50% {opacity: 0.6;}
+      100% {opacity: 0.25;}
+    }
+
+    h1 {
+      font-family: 'Nanum Brush Script', cursive;
+      font-size: 3.5rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.3rem;
+      text-shadow: 0 0 8px #fffb7d, 0 0 20px #f9ff9a;
+    }
+
+    .subtitle {
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: #c7d2e4cc;
+      letter-spacing: 0.15em;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 0.7rem 1.8rem;
+      background: #ffda6b;
+      color: #1b1b1b;
+      font-weight: 600;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 6px 12px #ffc94faa;
+      transition: background 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+
+    nav a:hover {
+      background: #ffec9a;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 20px #ffc94fbb;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 2rem auto 5rem;
+      padding: 0 1.2rem;
+      text-align: center;
+      color: #e4e8f0;
+    }
+
+    main h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 4px #000000bb;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: #d3d9f1cc;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      color: #f6f9ffcc;
+      font-weight: 500;
+      font-size: 1rem;
+      text-shadow: 0 0 6px #000000bb;
+    }
+
+    ul li {
+      background: #182c4a88;
+      padding: 1rem 1.6rem;
+      border-radius: 12px;
+      min-width: 180px;
+      box-shadow: inset 0 0 10px #1e3a6a99;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: #2c497bbb;
+      cursor: default;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      background: #101b2c;
+      color: #7788aa;
+      user-select: none;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.6rem;
+      }
+
+      main h2 {
+        font-size: 1.6rem;
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      ul li {
+        min-width: auto;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jeju Firefly Night Festival</h1>
+    <p class="subtitle">제주의 밤, 자연이 켜는 불빛</p>
+
+    <nav>
+      <a href="about.html">프로그램 안내</a>
+      <a href="contact.html">오시는 길</a>
+      <a href="https://adaptive-brow-c73.notion.site/27064bd83bbf80e1b721fbaf22fcfe44?source=copy_link" target="_blank" rel="noopener noreferrer">업체소개</a>
+      <a href="https://your-google-form-link" target="_blank" rel="noopener noreferrer">참가 신청</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>빛으로 채우는 제주 밤의 신비</h2>
+    <p>
+      제주 곶자왈의 청정 자연 속에서 펼쳐지는<br />
+      환상적인 반딧불이 탐방 체험. 가족과 연인과 함께<br />
+      잊지 못할 여름밤 추억을 만드세요.
+    </p>
+
+    <ul>
+      <li>📅 기간: 2025년 6월 ~ 8월 매주 금, 토, 일</li>
+      <li>📍 장소: 제주 곶자왈 자연 생태 숲</li>
+      <li>👨‍👩‍👧‍👦 대상: 가족, 연인, 자연 애호가 모두 환영</li>
+    </ul>
+  </main>
+
+  <footer>
+    &copy; 2025 제주 반딧불이 축제 운영위원회
+  </footer>
+</body>
+</html>
